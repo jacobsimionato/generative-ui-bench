@@ -1,10 +1,17 @@
 #!/usr/bin/env python
+"""Scores one raw model output using official A2UI SDK methods.
+
+Validation phases:
+1. Parsing: ExpressParser.parse_response (parses DSL, validates AST grammar & catalog signatures)
+2. State & Topology: MessageProcessor.process_messages & SurfaceComponentsModel.validate_topology
+   (validates root presence, reference integrity, orphans, cycles, depth limits)
+"""
 import json
 import os
-import re
 import sys
 
 from a2ui.core import Catalog
+from a2ui.core.processing.message_processor import MessageProcessor
 from a2ui.inference_formats.express.parser import ExpressParser
 
 HERE = os.path.dirname(os.path.abspath(__file__))
@@ -27,80 +34,50 @@ def score(raw_text):
       cat = Catalog.from_json(json.load(f))
     parser = ExpressParser(catalogs=[cat], surface_id="main")
 
+    # Step 1: SDK Express Parser
     parts = parser.parse_response(raw_text)
     messages = []
-    components = []
     for p in parts:
       if hasattr(p, "a2ui"):
         for m in p.a2ui:
           m_dict = m.model_dump(exclude_none=True, by_alias=True)
           messages.append(m_dict)
-          if "updateComponents" in m_dict:
-            components.extend(m_dict["updateComponents"].get("components", []))
 
-    comp_ids = [c["id"] for c in components if "id" in c]
+    if not messages:
+      result["errors"].append("No valid A2UI message envelopes parsed")
+      return result
 
-    # If 'root' is not in comp_ids, check if 'root = <target>' was assigned
-    if "root" not in comp_ids:
-      m_alias = re.search(r"^\s*root\s*=\s*([a-zA-Z0-9_]+)\s*$", raw_text, re.M)
-      if m_alias:
-        target = m_alias.group(1)
-        for c in components:
-          if c.get("id") == target:
-            c["id"] = "root"
-            break
-        comp_ids = [c["id"] for c in components if "id" in c]
+    # Step 2: SDK MessageProcessor & Surface Topology Validation
+    processor = MessageProcessor(catalogs=[cat])
+    processor.process_messages(messages)
 
-    root_present = "root" in comp_ids
+    all_components = []
+    root_found = False
 
-    # Find children / references
-    referenced_ids = set()
-    child_map = {}
-    for c in components:
-      cid = c.get("id")
-      refs = []
-      children = c.get("children", [])
-      if isinstance(children, list):
-        for ch in children:
-          if isinstance(ch, str):
-            refs.append(ch)
-      for k, v in c.items():
-        if k in ("id", "component", "children"):
-          continue
-        if isinstance(v, str) and v in comp_ids:
-          refs.append(v)
-        elif isinstance(v, list):
-          for item in v:
-            if isinstance(item, str) and item in comp_ids:
-              refs.append(item)
-      if cid:
-        child_map[cid] = refs
-      referenced_ids.update(refs)
+    if processor.model and hasattr(processor.model, "surfaces"):
+      for surface_id, surface in processor.model.surfaces.items():
+        comp_model = surface.components_model
+        all_components.extend(list(comp_model.values))
+        if surface.root_id and comp_model.has(surface.root_id):
+          root_found = True
 
-    dangling = [r for r in referenced_ids if r not in comp_ids]
+        # Run official SDK structural topology verification
+        try:
+          comp_model.validate_topology()
+        except Exception as top_err:
+          result["errors"].append(f"Topology error ({surface_id}): {top_err}")
 
-    # Reachability from root
-    reached = set()
-    if root_present:
-      queue = ["root"]
-      while queue:
-        curr = queue.pop(0)
-        if curr in reached:
-          continue
-        reached.add(curr)
-        for child in child_map.get(curr, []):
-          if child in comp_ids and child not in reached:
-            queue.append(child)
-
-    orphaned = [cid for cid in comp_ids if cid not in reached]
-
-    result["parse_ok"] = len(components) > 0
-    result["components_total"] = len(components)
-    result["component_ids"] = comp_ids
-    result["root_present"] = root_present
-    result["dangling_refs"] = dangling
-    result["orphaned_ids"] = orphaned if root_present else []
     result["messages"] = messages
+    result["components_total"] = len(all_components)
+    result["component_ids"] = [
+        getattr(c, "id", None)
+        if hasattr(c, "id")
+        else (c.get("id") if isinstance(c, dict) else None)
+        for c in all_components
+    ]
+    result["root_present"] = root_found
+    result["parse_ok"] = len(all_components) > 0 and len(result["errors"]) == 0
+
   except Exception as e:
     result["errors"].append(str(e))
 

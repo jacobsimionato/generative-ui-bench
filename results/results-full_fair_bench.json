@@ -697,12 +697,8 @@
   "complete": false,
   "errs": [
    {
-    "cls": "renderer-rejected",
-    "detail": "A2uiStateError: Surface not found for message: delivery_tracking"
-   },
-   {
-    "cls": "renderer-rejected",
-    "detail": "A2uiStateError: Surface not found for message: delivery_tracking"
+    "cls": "malformed-syntax",
+    "detail": "Surface not found for message: delivery_tracking"
    },
    {
     "cls": "root-missing",
@@ -710,10 +706,10 @@
    }
   ],
   "classes": [
-   "renderer-rejected",
+   "malformed-syntax",
    "root-missing"
   ],
-  "n": 25
+  "n": 0
  },
  {
   "fmt": "a2ui_express",
@@ -1085,6 +1081,10 @@
   "complete": false,
   "errs": [
    {
+    "cls": "malformed-syntax",
+    "detail": "Topology error (marketing-dashboard): Self-reference detected: Component 'datePicker' references its"
+   },
+   {
     "cls": "renderer-rejected",
     "detail": "A2uiValidationError: Validation failed for component 'Select' (dateSelect): value: Invalid input"
    },
@@ -1094,6 +1094,7 @@
    }
   ],
   "classes": [
+   "malformed-syntax",
    "renderer-rejected",
    "root-missing"
   ],

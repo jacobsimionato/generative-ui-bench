@@ -35,6 +35,7 @@ import {
   systemPrompt as jrYamlSystemPrompt,
   userPrompt as jrYamlUserPrompt,
 } from "./protocols/jsonrender_yaml/prompt.ts";
+import { systemPrompt as a2uiExpressSystemPrompt } from "./protocols/a2ui_express/prompt.ts";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
@@ -69,7 +70,7 @@ const FORMATS: Record<string, Format> = {
   },
   a2ui_express: {
     dir: LABEL,
-    system: () => readFileSync(join(__dirname, "protocols/a2ui_express/system-prompt.txt"), "utf8"),
+    system: () => a2uiExpressSystemPrompt(),
     user: (brief) => brief.prompt,
   },
 };
