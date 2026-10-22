@@ -1,0 +1,3872 @@
+[
+ {
+  "fmt": "openui",
+  "scenario": "b1-invoice",
+  "axis": "reqs",
+  "repeat": 1,
+  "tokens": null,
+  "renderable": true,
+  "complete": true,
+  "errs": [],
+  "classes": [],
+  "n": 38
+ },
+ {
+  "fmt": "openui",
+  "scenario": "b1-meeting",
+  "axis": "reqs",
+  "repeat": 1,
+  "tokens": null,
+  "renderable": true,
+  "complete": true,
+  "errs": [],
+  "classes": [],
+  "n": 22
+ },
+ {
+  "fmt": "openui",
+  "scenario": "b1-newsletter",
+  "axis": "reqs",
+  "repeat": 1,
+  "tokens": null,
+  "renderable": true,
+  "complete": true,
+  "errs": [],
+  "classes": [],
+  "n": 9
+ },
+ {
+  "fmt": "openui",
+  "scenario": "b1-order",
+  "axis": "reqs",
+  "repeat": 1,
+  "tokens": null,
+  "renderable": true,
+  "complete": false,
+  "errs": [
+   {
+    "cls": "signature-mismatch",
+    "detail": "DialogBlock/content"
+   }
+  ],
+  "classes": [
+   "signature-mismatch"
+  ],
+  "n": 20
+ },
+ {
+  "fmt": "openui",
+  "scenario": "b1-poll",
+  "axis": "reqs",
+  "repeat": 1,
+  "tokens": null,
+  "renderable": true,
+  "complete": true,
+  "errs": [],
+  "classes": [],
+  "n": 18
+ },
+ {
+  "fmt": "openui",
+  "scenario": "b1-profile",
+  "axis": "reqs",
+  "repeat": 1,
+  "tokens": null,
+  "renderable": true,
+  "complete": true,
+  "errs": [],
+  "classes": [],
+  "n": 23
+ },
+ {
+  "fmt": "openui",
+  "scenario": "b1-revenue",
+  "axis": "reqs",
+  "repeat": 1,
+  "tokens": null,
+  "renderable": true,
+  "complete": true,
+  "errs": [],
+  "classes": [],
+  "n": 23
+ },
+ {
+  "fmt": "openui",
+  "scenario": "b1-task",
+  "axis": "reqs",
+  "repeat": 1,
+  "tokens": null,
+  "renderable": true,
+  "complete": true,
+  "errs": [],
+  "classes": [],
+  "n": 17
+ },
+ {
+  "fmt": "openui",
+  "scenario": "b1-uptime",
+  "axis": "reqs",
+  "repeat": 1,
+  "tokens": null,
+  "renderable": true,
+  "complete": true,
+  "errs": [],
+  "classes": [],
+  "n": 26
+ },
+ {
+  "fmt": "openui",
+  "scenario": "b1-weather",
+  "axis": "reqs",
+  "repeat": 1,
+  "tokens": null,
+  "renderable": true,
+  "complete": true,
+  "errs": [],
+  "classes": [],
+  "n": 26
+ },
+ {
+  "fmt": "openui",
+  "scenario": "b2-budget",
+  "axis": "reqs",
+  "repeat": 1,
+  "tokens": null,
+  "renderable": true,
+  "complete": false,
+  "errs": [
+   {
+    "cls": "signature-mismatch",
+    "detail": "DialogBlock/content"
+   }
+  ],
+  "classes": [
+   "signature-mismatch"
+  ],
+  "n": 30
+ },
+ {
+  "fmt": "openui",
+  "scenario": "b2-cafe",
+  "axis": "reqs",
+  "repeat": 1,
+  "tokens": null,
+  "renderable": true,
+  "complete": true,
+  "errs": [],
+  "classes": [],
+  "n": 34
+ },
+ {
+  "fmt": "openui",
+  "scenario": "b2-course",
+  "axis": "reqs",
+  "repeat": 1,
+  "tokens": null,
+  "renderable": true,
+  "complete": true,
+  "errs": [],
+  "classes": [],
+  "n": 46
+ },
+ {
+  "fmt": "openui",
+  "scenario": "b2-event",
+  "axis": "reqs",
+  "repeat": 1,
+  "tokens": null,
+  "renderable": true,
+  "complete": true,
+  "errs": [],
+  "classes": [],
+  "n": 36
+ },
+ {
+  "fmt": "openui",
+  "scenario": "b2-fitness",
+  "axis": "reqs",
+  "repeat": 1,
+  "tokens": null,
+  "renderable": true,
+  "complete": true,
+  "errs": [],
+  "classes": [],
+  "n": 36
+ },
+ {
+  "fmt": "openui",
+  "scenario": "b2-job",
+  "axis": "reqs",
+  "repeat": 1,
+  "tokens": null,
+  "renderable": true,
+  "complete": true,
+  "errs": [],
+  "classes": [],
+  "n": 33
+ },
+ {
+  "fmt": "openui",
+  "scenario": "b2-sales",
+  "axis": "reqs",
+  "repeat": 1,
+  "tokens": null,
+  "renderable": true,
+  "complete": true,
+  "errs": [],
+  "classes": [],
+  "n": 18
+ },
+ {
+  "fmt": "openui",
+  "scenario": "b2-standup",
+  "axis": "reqs",
+  "repeat": 1,
+  "tokens": null,
+  "renderable": true,
+  "complete": true,
+  "errs": [],
+  "classes": [],
+  "n": 28
+ },
+ {
+  "fmt": "openui",
+  "scenario": "b2-stock",
+  "axis": "reqs",
+  "repeat": 1,
+  "tokens": null,
+  "renderable": true,
+  "complete": true,
+  "errs": [],
+  "classes": [],
+  "n": 35
+ },
+ {
+  "fmt": "openui",
+  "scenario": "b2-support",
+  "axis": "reqs",
+  "repeat": 1,
+  "tokens": null,
+  "renderable": true,
+  "complete": false,
+  "errs": [
+   {
+    "cls": "signature-mismatch",
+    "detail": "DialogBlock/content"
+   }
+  ],
+  "classes": [
+   "signature-mismatch"
+  ],
+  "n": 33
+ },
+ {
+  "fmt": "openui",
+  "scenario": "b3-clinic",
+  "axis": "reqs",
+  "repeat": 1,
+  "tokens": null,
+  "renderable": true,
+  "complete": true,
+  "errs": [],
+  "classes": [],
+  "n": 46
+ },
+ {
+  "fmt": "openui",
+  "scenario": "b3-content",
+  "axis": "reqs",
+  "repeat": 1,
+  "tokens": null,
+  "renderable": true,
+  "complete": false,
+  "errs": [
+   {
+    "cls": "signature-mismatch",
+    "detail": "DialogBlock/content"
+   }
+  ],
+  "classes": [
+   "signature-mismatch"
+  ],
+  "n": 44
+ },
+ {
+  "fmt": "openui",
+  "scenario": "b3-crm",
+  "axis": "reqs",
+  "repeat": 1,
+  "tokens": null,
+  "renderable": true,
+  "complete": true,
+  "errs": [],
+  "classes": [],
+  "n": 44
+ },
+ {
+  "fmt": "openui",
+  "scenario": "b3-finance",
+  "axis": "reqs",
+  "repeat": 1,
+  "tokens": null,
+  "renderable": true,
+  "complete": true,
+  "errs": [],
+  "classes": [],
+  "n": 39
+ },
+ {
+  "fmt": "openui",
+  "scenario": "b3-freight",
+  "axis": "reqs",
+  "repeat": 1,
+  "tokens": null,
+  "renderable": true,
+  "complete": false,
+  "errs": [
+   {
+    "cls": "signature-mismatch",
+    "detail": "DialogBlock/content"
+   }
+  ],
+  "classes": [
+   "signature-mismatch"
+  ],
+  "n": 46
+ },
+ {
+  "fmt": "openui",
+  "scenario": "b3-hr",
+  "axis": "reqs",
+  "repeat": 1,
+  "tokens": null,
+  "renderable": true,
+  "complete": true,
+  "errs": [],
+  "classes": [],
+  "n": 54
+ },
+ {
+  "fmt": "openui",
+  "scenario": "b3-learning",
+  "axis": "reqs",
+  "repeat": 1,
+  "tokens": null,
+  "renderable": true,
+  "complete": false,
+  "errs": [
+   {
+    "cls": "signature-mismatch",
+    "detail": "DialogBlock/content"
+   }
+  ],
+  "classes": [
+   "signature-mismatch"
+  ],
+  "n": 46
+ },
+ {
+  "fmt": "openui",
+  "scenario": "b3-marketing",
+  "axis": "reqs",
+  "repeat": 1,
+  "tokens": null,
+  "renderable": true,
+  "complete": true,
+  "errs": [],
+  "classes": [],
+  "n": 37
+ },
+ {
+  "fmt": "openui",
+  "scenario": "b3-orders",
+  "axis": "reqs",
+  "repeat": 1,
+  "tokens": null,
+  "renderable": true,
+  "complete": true,
+  "errs": [],
+  "classes": [],
+  "n": 44
+ },
+ {
+  "fmt": "openui",
+  "scenario": "b3-server",
+  "axis": "reqs",
+  "repeat": 1,
+  "tokens": null,
+  "renderable": true,
+  "complete": true,
+  "errs": [],
+  "classes": [],
+  "n": 48
+ },
+ {
+  "fmt": "openui",
+  "scenario": "b4-airline",
+  "axis": "reqs",
+  "repeat": 1,
+  "tokens": null,
+  "renderable": true,
+  "complete": false,
+  "errs": [
+   {
+    "cls": "signature-mismatch",
+    "detail": "DialogBlock/content"
+   }
+  ],
+  "classes": [
+   "signature-mismatch"
+  ],
+  "n": 78
+ },
+ {
+  "fmt": "openui",
+  "scenario": "b4-bank",
+  "axis": "reqs",
+  "repeat": 1,
+  "tokens": null,
+  "renderable": true,
+  "complete": false,
+  "errs": [
+   {
+    "cls": "signature-mismatch",
+    "detail": "DialogBlock/content"
+   }
+  ],
+  "classes": [
+   "signature-mismatch"
+  ],
+  "n": 73
+ },
+ {
+  "fmt": "openui",
+  "scenario": "b4-creator",
+  "axis": "reqs",
+  "repeat": 1,
+  "tokens": null,
+  "renderable": true,
+  "complete": true,
+  "errs": [],
+  "classes": [],
+  "n": 72
+ },
+ {
+  "fmt": "openui",
+  "scenario": "b4-hospital",
+  "axis": "reqs",
+  "repeat": 1,
+  "tokens": null,
+  "renderable": true,
+  "complete": true,
+  "errs": [],
+  "classes": [],
+  "n": 81
+ },
+ {
+  "fmt": "openui",
+  "scenario": "b4-portfolio",
+  "axis": "reqs",
+  "repeat": 1,
+  "tokens": null,
+  "renderable": true,
+  "complete": false,
+  "errs": [
+   {
+    "cls": "signature-mismatch",
+    "detail": "DialogBlock/content"
+   }
+  ],
+  "classes": [
+   "signature-mismatch"
+  ],
+  "n": 63
+ },
+ {
+  "fmt": "openui",
+  "scenario": "b4-power",
+  "axis": "reqs",
+  "repeat": 1,
+  "tokens": null,
+  "renderable": true,
+  "complete": true,
+  "errs": [],
+  "classes": [],
+  "n": 81
+ },
+ {
+  "fmt": "openui",
+  "scenario": "b4-retail",
+  "axis": "reqs",
+  "repeat": 1,
+  "tokens": null,
+  "renderable": true,
+  "complete": true,
+  "errs": [],
+  "classes": [],
+  "n": 90
+ },
+ {
+  "fmt": "openui",
+  "scenario": "b4-saas",
+  "axis": "reqs",
+  "repeat": 1,
+  "tokens": null,
+  "renderable": true,
+  "complete": false,
+  "errs": [
+   {
+    "cls": "signature-mismatch",
+    "detail": "DialogBlock/content"
+   }
+  ],
+  "classes": [
+   "signature-mismatch"
+  ],
+  "n": 71
+ },
+ {
+  "fmt": "openui",
+  "scenario": "b5-city",
+  "axis": "reqs",
+  "repeat": 1,
+  "tokens": null,
+  "renderable": true,
+  "complete": true,
+  "errs": [],
+  "classes": [],
+  "n": 137
+ },
+ {
+  "fmt": "openui",
+  "scenario": "b5-disaster",
+  "axis": "reqs",
+  "repeat": 1,
+  "tokens": null,
+  "renderable": true,
+  "complete": true,
+  "errs": [],
+  "classes": [],
+  "n": 175
+ },
+ {
+  "fmt": "openui",
+  "scenario": "b5-exec",
+  "axis": "reqs",
+  "repeat": 1,
+  "tokens": null,
+  "renderable": true,
+  "complete": true,
+  "errs": [],
+  "classes": [],
+  "n": 61
+ },
+ {
+  "fmt": "openui",
+  "scenario": "b5-fund",
+  "axis": "reqs",
+  "repeat": 1,
+  "tokens": null,
+  "renderable": true,
+  "complete": false,
+  "errs": [
+   {
+    "cls": "signature-mismatch",
+    "detail": "DialogBlock/content"
+   }
+  ],
+  "classes": [
+   "signature-mismatch"
+  ],
+  "n": 95
+ },
+ {
+  "fmt": "openui",
+  "scenario": "b5-game",
+  "axis": "reqs",
+  "repeat": 1,
+  "tokens": null,
+  "renderable": true,
+  "complete": true,
+  "errs": [],
+  "classes": [],
+  "n": 85
+ },
+ {
+  "fmt": "openui",
+  "scenario": "b5-plant",
+  "axis": "reqs",
+  "repeat": 1,
+  "tokens": null,
+  "renderable": true,
+  "complete": true,
+  "errs": [],
+  "classes": [],
+  "n": 113
+ },
+ {
+  "fmt": "openui",
+  "scenario": "b5-streaming",
+  "axis": "reqs",
+  "repeat": 1,
+  "tokens": null,
+  "renderable": true,
+  "complete": true,
+  "errs": [],
+  "classes": [],
+  "n": 89
+ },
+ {
+  "fmt": "openui",
+  "scenario": "b5-university",
+  "axis": "reqs",
+  "repeat": 1,
+  "tokens": null,
+  "renderable": true,
+  "complete": false,
+  "errs": [
+   {
+    "cls": "signature-mismatch",
+    "detail": "DialogBlock/content"
+   },
+   {
+    "cls": "signature-mismatch",
+    "detail": "DrawerBlock/content"
+   }
+  ],
+  "classes": [
+   "signature-mismatch"
+  ],
+  "n": 84
+ },
+ {
+  "fmt": "a2ui_express",
+  "scenario": "b1-invoice",
+  "axis": "reqs",
+  "repeat": 1,
+  "tokens": null,
+  "renderable": true,
+  "complete": true,
+  "errs": [],
+  "classes": [],
+  "n": 18
+ },
+ {
+  "fmt": "a2ui_express",
+  "scenario": "b1-meeting",
+  "axis": "reqs",
+  "repeat": 1,
+  "tokens": null,
+  "renderable": true,
+  "complete": true,
+  "errs": [],
+  "classes": [],
+  "n": 11
+ },
+ {
+  "fmt": "a2ui_express",
+  "scenario": "b1-newsletter",
+  "axis": "reqs",
+  "repeat": 1,
+  "tokens": null,
+  "renderable": false,
+  "complete": false,
+  "errs": [
+   {
+    "cls": "malformed-syntax",
+    "detail": "Property 'rules' of component 'Input' does not support dynamic data bindings (paths). - Help: Proper"
+   },
+   {
+    "cls": "root-missing",
+    "detail": "renderer surface has no root"
+   }
+  ],
+  "classes": [
+   "malformed-syntax",
+   "root-missing"
+  ],
+  "n": 0
+ },
+ {
+  "fmt": "a2ui_express",
+  "scenario": "b1-order",
+  "axis": "reqs",
+  "repeat": 1,
+  "tokens": null,
+  "renderable": false,
+  "complete": false,
+  "errs": [
+   {
+    "cls": "renderer-rejected",
+    "detail": "A2uiStateError: Surface not found for message: delivery_tracking"
+   },
+   {
+    "cls": "renderer-rejected",
+    "detail": "A2uiStateError: Surface not found for message: delivery_tracking"
+   },
+   {
+    "cls": "root-missing",
+    "detail": "renderer surface has no root"
+   }
+  ],
+  "classes": [
+   "renderer-rejected",
+   "root-missing"
+  ],
+  "n": 25
+ },
+ {
+  "fmt": "a2ui_express",
+  "scenario": "b1-poll",
+  "axis": "reqs",
+  "repeat": 1,
+  "tokens": null,
+  "renderable": false,
+  "complete": false,
+  "errs": [
+   {
+    "cls": "malformed-syntax",
+    "detail": "Property 'value' of component 'RadioGroup' does not support dynamic data bindings (paths). - Help: P"
+   },
+   {
+    "cls": "root-missing",
+    "detail": "renderer surface has no root"
+   }
+  ],
+  "classes": [
+   "malformed-syntax",
+   "root-missing"
+  ],
+  "n": 0
+ },
+ {
+  "fmt": "a2ui_express",
+  "scenario": "b1-profile",
+  "axis": "reqs",
+  "repeat": 1,
+  "tokens": null,
+  "renderable": false,
+  "complete": false,
+  "errs": [
+   {
+    "cls": "malformed-syntax",
+    "detail": "Property 'value' of component 'TextArea' does not support dynamic data bindings (paths). - Help: Pro"
+   },
+   {
+    "cls": "root-missing",
+    "detail": "renderer surface has no root"
+   }
+  ],
+  "classes": [
+   "malformed-syntax",
+   "root-missing"
+  ],
+  "n": 0
+ },
+ {
+  "fmt": "a2ui_express",
+  "scenario": "b1-revenue",
+  "axis": "reqs",
+  "repeat": 1,
+  "tokens": null,
+  "renderable": true,
+  "complete": true,
+  "errs": [],
+  "classes": [],
+  "n": 15
+ },
+ {
+  "fmt": "a2ui_express",
+  "scenario": "b1-task",
+  "axis": "reqs",
+  "repeat": 1,
+  "tokens": null,
+  "renderable": true,
+  "complete": true,
+  "errs": [],
+  "classes": [],
+  "n": 14
+ },
+ {
+  "fmt": "a2ui_express",
+  "scenario": "b1-uptime",
+  "axis": "reqs",
+  "repeat": 1,
+  "tokens": null,
+  "renderable": true,
+  "complete": true,
+  "errs": [],
+  "classes": [],
+  "n": 13
+ },
+ {
+  "fmt": "a2ui_express",
+  "scenario": "b1-weather",
+  "axis": "reqs",
+  "repeat": 1,
+  "tokens": null,
+  "renderable": true,
+  "complete": true,
+  "errs": [],
+  "classes": [],
+  "n": 17
+ },
+ {
+  "fmt": "a2ui_express",
+  "scenario": "b2-budget",
+  "axis": "reqs",
+  "repeat": 1,
+  "tokens": null,
+  "renderable": false,
+  "complete": false,
+  "errs": [
+   {
+    "cls": "required-field",
+    "detail": "Unknown check function 'required' not defined in catalog 'thesys.dev:c1-openui'. - Help: Please corr"
+   },
+   {
+    "cls": "root-missing",
+    "detail": "renderer surface has no root"
+   }
+  ],
+  "classes": [
+   "required-field",
+   "root-missing"
+  ],
+  "n": 0
+ },
+ {
+  "fmt": "a2ui_express",
+  "scenario": "b2-cafe",
+  "axis": "reqs",
+  "repeat": 1,
+  "tokens": null,
+  "renderable": true,
+  "complete": true,
+  "errs": [],
+  "classes": [],
+  "n": 24
+ },
+ {
+  "fmt": "a2ui_express",
+  "scenario": "b2-course",
+  "axis": "reqs",
+  "repeat": 1,
+  "tokens": null,
+  "renderable": true,
+  "complete": true,
+  "errs": [],
+  "classes": [],
+  "n": 15
+ },
+ {
+  "fmt": "a2ui_express",
+  "scenario": "b2-event",
+  "axis": "reqs",
+  "repeat": 1,
+  "tokens": null,
+  "renderable": false,
+  "complete": false,
+  "errs": [
+   {
+    "cls": "required-field",
+    "detail": "Unknown check function 'required' not defined in catalog 'thesys.dev:c1-openui'. - Help: Please corr"
+   },
+   {
+    "cls": "root-missing",
+    "detail": "renderer surface has no root"
+   }
+  ],
+  "classes": [
+   "required-field",
+   "root-missing"
+  ],
+  "n": 0
+ },
+ {
+  "fmt": "a2ui_express",
+  "scenario": "b2-fitness",
+  "axis": "reqs",
+  "repeat": 1,
+  "tokens": null,
+  "renderable": true,
+  "complete": true,
+  "errs": [],
+  "classes": [],
+  "n": 31
+ },
+ {
+  "fmt": "a2ui_express",
+  "scenario": "b2-job",
+  "axis": "reqs",
+  "repeat": 1,
+  "tokens": null,
+  "renderable": false,
+  "complete": false,
+  "errs": [
+   {
+    "cls": "required-field",
+    "detail": "Unknown check function 'required' not defined in catalog 'thesys.dev:c1-openui'. - Help: Please corr"
+   },
+   {
+    "cls": "root-missing",
+    "detail": "renderer surface has no root"
+   }
+  ],
+  "classes": [
+   "required-field",
+   "root-missing"
+  ],
+  "n": 0
+ },
+ {
+  "fmt": "a2ui_express",
+  "scenario": "b2-sales",
+  "axis": "reqs",
+  "repeat": 1,
+  "tokens": null,
+  "renderable": true,
+  "complete": true,
+  "errs": [],
+  "classes": [],
+  "n": 36
+ },
+ {
+  "fmt": "a2ui_express",
+  "scenario": "b2-standup",
+  "axis": "reqs",
+  "repeat": 1,
+  "tokens": null,
+  "renderable": true,
+  "complete": true,
+  "errs": [],
+  "classes": [],
+  "n": 64
+ },
+ {
+  "fmt": "a2ui_express",
+  "scenario": "b2-stock",
+  "axis": "reqs",
+  "repeat": 1,
+  "tokens": null,
+  "renderable": true,
+  "complete": true,
+  "errs": [],
+  "classes": [],
+  "n": 18
+ },
+ {
+  "fmt": "a2ui_express",
+  "scenario": "b2-support",
+  "axis": "reqs",
+  "repeat": 1,
+  "tokens": null,
+  "renderable": true,
+  "complete": true,
+  "errs": [],
+  "classes": [],
+  "n": 41
+ },
+ {
+  "fmt": "a2ui_express",
+  "scenario": "b3-clinic",
+  "axis": "reqs",
+  "repeat": 1,
+  "tokens": null,
+  "renderable": true,
+  "complete": true,
+  "errs": [],
+  "classes": [],
+  "n": 53
+ },
+ {
+  "fmt": "a2ui_express",
+  "scenario": "b3-content",
+  "axis": "reqs",
+  "repeat": 1,
+  "tokens": null,
+  "renderable": false,
+  "complete": false,
+  "errs": [
+   {
+    "cls": "required-field",
+    "detail": "Unknown check function 'required' not defined in catalog 'thesys.dev:c1-openui'. - Help: Please corr"
+   },
+   {
+    "cls": "root-missing",
+    "detail": "renderer surface has no root"
+   }
+  ],
+  "classes": [
+   "required-field",
+   "root-missing"
+  ],
+  "n": 0
+ },
+ {
+  "fmt": "a2ui_express",
+  "scenario": "b3-crm",
+  "axis": "reqs",
+  "repeat": 1,
+  "tokens": null,
+  "renderable": true,
+  "complete": true,
+  "errs": [],
+  "classes": [],
+  "n": 45
+ },
+ {
+  "fmt": "a2ui_express",
+  "scenario": "b3-finance",
+  "axis": "reqs",
+  "repeat": 1,
+  "tokens": null,
+  "renderable": true,
+  "complete": true,
+  "errs": [],
+  "classes": [],
+  "n": 33
+ },
+ {
+  "fmt": "a2ui_express",
+  "scenario": "b3-freight",
+  "axis": "reqs",
+  "repeat": 1,
+  "tokens": null,
+  "renderable": true,
+  "complete": true,
+  "errs": [],
+  "classes": [],
+  "n": 56
+ },
+ {
+  "fmt": "a2ui_express",
+  "scenario": "b3-hr",
+  "axis": "reqs",
+  "repeat": 1,
+  "tokens": null,
+  "renderable": true,
+  "complete": true,
+  "errs": [],
+  "classes": [],
+  "n": 60
+ },
+ {
+  "fmt": "a2ui_express",
+  "scenario": "b3-learning",
+  "axis": "reqs",
+  "repeat": 1,
+  "tokens": null,
+  "renderable": false,
+  "complete": false,
+  "errs": [
+   {
+    "cls": "enum-mismatch",
+    "detail": "Value 'success' is not a valid enum choice for property 'variant' of component 'Badge'. Allowed valu"
+   },
+   {
+    "cls": "root-missing",
+    "detail": "renderer surface has no root"
+   }
+  ],
+  "classes": [
+   "enum-mismatch",
+   "root-missing"
+  ],
+  "n": 0
+ },
+ {
+  "fmt": "a2ui_express",
+  "scenario": "b3-marketing",
+  "axis": "reqs",
+  "repeat": 1,
+  "tokens": null,
+  "renderable": false,
+  "complete": false,
+  "errs": [
+   {
+    "cls": "renderer-rejected",
+    "detail": "A2uiValidationError: Validation failed for component 'Select' (dateSelect): value: Invalid input"
+   },
+   {
+    "cls": "root-missing",
+    "detail": "renderer surface has no root"
+   }
+  ],
+  "classes": [
+   "renderer-rejected",
+   "root-missing"
+  ],
+  "n": 37
+ },
+ {
+  "fmt": "a2ui_express",
+  "scenario": "b3-orders",
+  "axis": "reqs",
+  "repeat": 1,
+  "tokens": null,
+  "renderable": false,
+  "complete": false,
+  "errs": [
+   {
+    "cls": "required-field",
+    "detail": "Unknown check function 'required' not defined in catalog 'thesys.dev:c1-openui'. - Help: Please corr"
+   },
+   {
+    "cls": "root-missing",
+    "detail": "renderer surface has no root"
+   }
+  ],
+  "classes": [
+   "required-field",
+   "root-missing"
+  ],
+  "n": 0
+ },
+ {
+  "fmt": "a2ui_express",
+  "scenario": "b3-server",
+  "axis": "reqs",
+  "repeat": 1,
+  "tokens": null,
+  "renderable": false,
+  "complete": false,
+  "errs": [
+   {
+    "cls": "enum-mismatch",
+    "detail": "Value 'success' is not a valid enum choice for property 'variant' of component 'Badge'. Allowed valu"
+   },
+   {
+    "cls": "root-missing",
+    "detail": "renderer surface has no root"
+   }
+  ],
+  "classes": [
+   "enum-mismatch",
+   "root-missing"
+  ],
+  "n": 0
+ },
+ {
+  "fmt": "a2ui_express",
+  "scenario": "b4-airline",
+  "axis": "reqs",
+  "repeat": 1,
+  "tokens": null,
+  "renderable": true,
+  "complete": true,
+  "errs": [],
+  "classes": [],
+  "n": 58
+ },
+ {
+  "fmt": "a2ui_express",
+  "scenario": "b4-bank",
+  "axis": "reqs",
+  "repeat": 1,
+  "tokens": null,
+  "renderable": false,
+  "complete": false,
+  "errs": [
+   {
+    "cls": "required-field",
+    "detail": "Unknown check function 'required' not defined in catalog 'thesys.dev:c1-openui'. - Help: Please corr"
+   },
+   {
+    "cls": "root-missing",
+    "detail": "renderer surface has no root"
+   }
+  ],
+  "classes": [
+   "required-field",
+   "root-missing"
+  ],
+  "n": 0
+ },
+ {
+  "fmt": "a2ui_express",
+  "scenario": "b4-creator",
+  "axis": "reqs",
+  "repeat": 1,
+  "tokens": null,
+  "renderable": false,
+  "complete": false,
+  "errs": [
+   {
+    "cls": "malformed-syntax",
+    "detail": "Property 'value' of component 'Select' does not support dynamic data bindings (paths). - Help: Prope"
+   },
+   {
+    "cls": "root-missing",
+    "detail": "renderer surface has no root"
+   }
+  ],
+  "classes": [
+   "malformed-syntax",
+   "root-missing"
+  ],
+  "n": 0
+ },
+ {
+  "fmt": "a2ui_express",
+  "scenario": "b4-hospital",
+  "axis": "reqs",
+  "repeat": 1,
+  "tokens": null,
+  "renderable": true,
+  "complete": true,
+  "errs": [],
+  "classes": [],
+  "n": 107
+ },
+ {
+  "fmt": "a2ui_express",
+  "scenario": "b4-portfolio",
+  "axis": "reqs",
+  "repeat": 1,
+  "tokens": null,
+  "renderable": true,
+  "complete": true,
+  "errs": [],
+  "classes": [],
+  "n": 64
+ },
+ {
+  "fmt": "a2ui_express",
+  "scenario": "b4-power",
+  "axis": "reqs",
+  "repeat": 1,
+  "tokens": null,
+  "renderable": false,
+  "complete": false,
+  "errs": [
+   {
+    "cls": "required-field",
+    "detail": "Unknown check function 'required' not defined in catalog 'thesys.dev:c1-openui'. - Help: Please corr"
+   },
+   {
+    "cls": "root-missing",
+    "detail": "renderer surface has no root"
+   }
+  ],
+  "classes": [
+   "required-field",
+   "root-missing"
+  ],
+  "n": 0
+ },
+ {
+  "fmt": "a2ui_express",
+  "scenario": "b4-retail",
+  "axis": "reqs",
+  "repeat": 1,
+  "tokens": null,
+  "renderable": false,
+  "complete": false,
+  "errs": [
+   {
+    "cls": "malformed-syntax",
+    "detail": "Property 'value' of component 'Select' does not support dynamic data bindings (paths). - Help: Prope"
+   },
+   {
+    "cls": "root-missing",
+    "detail": "renderer surface has no root"
+   }
+  ],
+  "classes": [
+   "malformed-syntax",
+   "root-missing"
+  ],
+  "n": 0
+ },
+ {
+  "fmt": "a2ui_express",
+  "scenario": "b4-saas",
+  "axis": "reqs",
+  "repeat": 1,
+  "tokens": null,
+  "renderable": false,
+  "complete": false,
+  "errs": [
+   {
+    "cls": "renderer-rejected",
+    "detail": "A2uiValidationError: Validation failed for component 'Select' (periodSelect): value: Invalid input"
+   },
+   {
+    "cls": "root-missing",
+    "detail": "renderer surface has no root"
+   }
+  ],
+  "classes": [
+   "renderer-rejected",
+   "root-missing"
+  ],
+  "n": 76
+ },
+ {
+  "fmt": "a2ui_express",
+  "scenario": "b5-city",
+  "axis": "reqs",
+  "repeat": 1,
+  "tokens": null,
+  "renderable": false,
+  "complete": false,
+  "errs": [
+   {
+    "cls": "malformed-syntax",
+    "detail": "Property 'value' of component 'Select' does not support dynamic data bindings (paths). - Help: Prope"
+   },
+   {
+    "cls": "root-missing",
+    "detail": "renderer surface has no root"
+   }
+  ],
+  "classes": [
+   "malformed-syntax",
+   "root-missing"
+  ],
+  "n": 0
+ },
+ {
+  "fmt": "a2ui_express",
+  "scenario": "b5-disaster",
+  "axis": "reqs",
+  "repeat": 1,
+  "tokens": null,
+  "renderable": true,
+  "complete": true,
+  "errs": [],
+  "classes": [],
+  "n": 162
+ },
+ {
+  "fmt": "a2ui_express",
+  "scenario": "b5-exec",
+  "axis": "reqs",
+  "repeat": 1,
+  "tokens": null,
+  "renderable": true,
+  "complete": true,
+  "errs": [],
+  "classes": [],
+  "n": 79
+ },
+ {
+  "fmt": "a2ui_express",
+  "scenario": "b5-fund",
+  "axis": "reqs",
+  "repeat": 1,
+  "tokens": null,
+  "renderable": false,
+  "complete": false,
+  "errs": [
+   {
+    "cls": "renderer-rejected",
+    "detail": "A2uiValidationError: Validation failed for component 'Select' (tfSelect): value: Invalid input"
+   },
+   {
+    "cls": "root-missing",
+    "detail": "renderer surface has no root"
+   }
+  ],
+  "classes": [
+   "renderer-rejected",
+   "root-missing"
+  ],
+  "n": 105
+ },
+ {
+  "fmt": "a2ui_express",
+  "scenario": "b5-game",
+  "axis": "reqs",
+  "repeat": 1,
+  "tokens": null,
+  "renderable": true,
+  "complete": true,
+  "errs": [],
+  "classes": [],
+  "n": 107
+ },
+ {
+  "fmt": "a2ui_express",
+  "scenario": "b5-plant",
+  "axis": "reqs",
+  "repeat": 1,
+  "tokens": null,
+  "renderable": false,
+  "complete": false,
+  "errs": [
+   {
+    "cls": "malformed-syntax",
+    "detail": "Property 'value' of component 'Select' does not support dynamic data bindings (paths). - Help: Prope"
+   },
+   {
+    "cls": "root-missing",
+    "detail": "renderer surface has no root"
+   }
+  ],
+  "classes": [
+   "malformed-syntax",
+   "root-missing"
+  ],
+  "n": 0
+ },
+ {
+  "fmt": "a2ui_express",
+  "scenario": "b5-streaming",
+  "axis": "reqs",
+  "repeat": 1,
+  "tokens": null,
+  "renderable": false,
+  "complete": false,
+  "errs": [
+   {
+    "cls": "enum-mismatch",
+    "detail": "Value 'success' is not a valid enum choice for property 'variant' of component 'Badge'. Allowed valu"
+   },
+   {
+    "cls": "root-missing",
+    "detail": "renderer surface has no root"
+   }
+  ],
+  "classes": [
+   "enum-mismatch",
+   "root-missing"
+  ],
+  "n": 0
+ },
+ {
+  "fmt": "a2ui_express",
+  "scenario": "b5-university",
+  "axis": "reqs",
+  "repeat": 1,
+  "tokens": null,
+  "renderable": true,
+  "complete": true,
+  "errs": [],
+  "classes": [],
+  "n": 104
+ },
+ {
+  "fmt": "jsonrender_yaml",
+  "scenario": "b1-invoice",
+  "axis": "reqs",
+  "repeat": 1,
+  "tokens": null,
+  "renderable": true,
+  "complete": false,
+  "errs": [
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:header"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:status_badge"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:callout_due"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:heading_details"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:details_table"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:details_col_label"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:details_col_value"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:sep_1"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:heading_items"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:items_table"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:col_desc"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:col_hours"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:col_rate"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:col_amount"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:sep_2"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:heading_pay"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:payment_card"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:pay_form"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:fc_card_holder"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:inp_card_holder"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:fc_card_num"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:inp_card_num"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:form_buttons"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:btn_pay_now"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:btn_download_pdf"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:followups"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:fu_1"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:fu_2"
+   }
+  ],
+  "classes": [
+   "reference-graph"
+  ],
+  "n": 29
+ },
+ {
+  "fmt": "jsonrender_yaml",
+  "scenario": "b1-meeting",
+  "axis": "reqs",
+  "repeat": 1,
+  "tokens": null,
+  "renderable": true,
+  "complete": false,
+  "errs": [
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:timeBadge"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:meetingTitle"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:meetingInfo"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:joinButtons"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:joinBtn"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:copyLinkBtn"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:attendeesHeader"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:attendeesList"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:att1"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:att2"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:att3"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:att4"
+   }
+  ],
+  "classes": [
+   "reference-graph"
+  ],
+  "n": 20
+ },
+ {
+  "fmt": "jsonrender_yaml",
+  "scenario": "b1-newsletter",
+  "axis": "reqs",
+  "repeat": 1,
+  "tokens": null,
+  "renderable": true,
+  "complete": false,
+  "errs": [
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:header"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:infoText"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:signupForm"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:emailControl"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:emailInput"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:actionButtons"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:subscribeBtn"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:spamNotice"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:followUps"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:fu1"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:fu2"
+   }
+  ],
+  "classes": [
+   "reference-graph"
+  ],
+  "n": 12
+ },
+ {
+  "fmt": "jsonrender_yaml",
+  "scenario": "b1-order",
+  "axis": "reqs",
+  "repeat": 1,
+  "tokens": null,
+  "renderable": true,
+  "complete": false,
+  "errs": [
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:header"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:etaCallout"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:trackingSteps"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:step1"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:step2"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:step3"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:step4"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:step5"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:locationDetails"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:colAttribute"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:colDetail"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:problemDialog"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:problemForm"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:issueTypeControl"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:issueTypeSelect"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:optDelay"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:optAddress"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:optDamaged"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:optMissing"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:issueNotesControl"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:issueNotesInput"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:formButtons"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:submitBtn"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:followUps"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:fu1"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:fu2"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:fu3"
+   }
+  ],
+  "classes": [
+   "reference-graph"
+  ],
+  "n": 28
+ },
+ {
+  "fmt": "jsonrender_yaml",
+  "scenario": "b1-poll",
+  "axis": "reqs",
+  "repeat": 1,
+  "tokens": null,
+  "renderable": true,
+  "complete": true,
+  "errs": [],
+  "classes": [],
+  "n": 23
+ },
+ {
+  "fmt": "jsonrender_yaml",
+  "scenario": "b1-profile",
+  "axis": "reqs",
+  "repeat": 1,
+  "tokens": null,
+  "renderable": true,
+  "complete": true,
+  "errs": [],
+  "classes": [],
+  "n": 26
+ },
+ {
+  "fmt": "jsonrender_yaml",
+  "scenario": "b1-revenue",
+  "axis": "reqs",
+  "repeat": 1,
+  "tokens": null,
+  "renderable": true,
+  "complete": true,
+  "errs": [],
+  "classes": [],
+  "n": 27
+ },
+ {
+  "fmt": "jsonrender_yaml",
+  "scenario": "b1-task",
+  "axis": "reqs",
+  "repeat": 1,
+  "tokens": null,
+  "renderable": true,
+  "complete": false,
+  "errs": [
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:header"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:callout"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:task_detail_card"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:status_row"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:status_badge"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:urgency_tag"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:task_title"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:task_desc"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:sep1"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:subtask_heading"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:checklist"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:sub1"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:sub2"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:sub3"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:sep2"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:progress_bar"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:action_row"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:complete_dialog"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:secondary_actions"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:snooze_btn"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:notes_drawer"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:scratchpad_text"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:scratchpad_code"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:follow_ups"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:fu1"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:fu2"
+   }
+  ],
+  "classes": [
+   "reference-graph"
+  ],
+  "n": 27
+ },
+ {
+  "fmt": "jsonrender_yaml",
+  "scenario": "b1-uptime",
+  "axis": "reqs",
+  "repeat": 1,
+  "tokens": null,
+  "renderable": false,
+  "complete": false,
+  "errs": [
+   {
+    "cls": "malformed-syntax",
+    "detail": "yaml parse error: Nested mappings are not allowed in compact mappings at line 49, column 14:\n\n    "
+   }
+  ],
+  "classes": [
+   "malformed-syntax"
+  ]
+ },
+ {
+  "fmt": "jsonrender_yaml",
+  "scenario": "b1-weather",
+  "axis": "reqs",
+  "repeat": 1,
+  "tokens": null,
+  "renderable": true,
+  "complete": false,
+  "errs": [
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:header"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:current_card"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:current_heading"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:current_tags"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:sun_callout"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:outlook_heading"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:outlook_chart"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:high_series"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:low_series"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:outlook_table"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:col_day"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:col_condition"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:col_temp_range"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:col_precip"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:followup_block"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:fu_hourly"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:fu_rain"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:fu_weekend"
+   }
+  ],
+  "classes": [
+   "reference-graph"
+  ],
+  "n": 19
+ },
+ {
+  "fmt": "jsonrender_yaml",
+  "scenario": "b2-budget",
+  "axis": "reqs",
+  "repeat": 1,
+  "tokens": null,
+  "renderable": true,
+  "complete": false,
+  "errs": [
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:header"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:top_actions_card"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:month_select_control"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:month_select"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:m_may"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:m_apr"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:m_mar"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:m_feb"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:add_expense_dialog"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:add_expense_form"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:f_amount"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:in_amount"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:f_category"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:in_category"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:cat_housing"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:cat_food"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:cat_trans"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:cat_ent"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:cat_util"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:cat_health"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:f_date"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:in_date"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:f_desc"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:in_desc"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:f_buttons"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:btn_save"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:btn_cancel"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:sep1"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:budget_summary_card"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:kpi_heading"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:kpi_progress"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:kpi_status"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:largest_expense_callout"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:spending_split_card"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:split_heading"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:split_body_card"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:category_pie"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:breakdown_table"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:col_cat"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:col_spent"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:col_budget"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:col_status"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:followups"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:fu1"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:fu2"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:fu3"
+   }
+  ],
+  "classes": [
+   "reference-graph"
+  ],
+  "n": 47
+ },
+ {
+  "fmt": "jsonrender_yaml",
+  "scenario": "b2-cafe",
+  "axis": "reqs",
+  "repeat": 1,
+  "tokens": null,
+  "renderable": true,
+  "complete": true,
+  "errs": [],
+  "classes": [],
+  "n": 21
+ },
+ {
+  "fmt": "jsonrender_yaml",
+  "scenario": "b2-course",
+  "axis": "reqs",
+  "repeat": 1,
+  "tokens": null,
+  "renderable": true,
+  "complete": true,
+  "errs": [],
+  "classes": [],
+  "n": 38
+ },
+ {
+  "fmt": "jsonrender_yaml",
+  "scenario": "b2-event",
+  "axis": "reqs",
+  "repeat": 1,
+  "tokens": null,
+  "renderable": true,
+  "complete": true,
+  "errs": [],
+  "classes": [],
+  "n": 41
+ },
+ {
+  "fmt": "jsonrender_yaml",
+  "scenario": "b2-fitness",
+  "axis": "reqs",
+  "repeat": 1,
+  "tokens": null,
+  "renderable": true,
+  "complete": true,
+  "errs": [],
+  "classes": [],
+  "n": 39
+ },
+ {
+  "fmt": "jsonrender_yaml",
+  "scenario": "b2-job",
+  "axis": "reqs",
+  "repeat": 1,
+  "tokens": null,
+  "renderable": true,
+  "complete": true,
+  "errs": [],
+  "classes": [],
+  "n": 38
+ },
+ {
+  "fmt": "jsonrender_yaml",
+  "scenario": "b2-sales",
+  "axis": "reqs",
+  "repeat": 1,
+  "tokens": null,
+  "renderable": true,
+  "complete": true,
+  "errs": [],
+  "classes": [],
+  "n": 29
+ },
+ {
+  "fmt": "jsonrender_yaml",
+  "scenario": "b2-standup",
+  "axis": "reqs",
+  "repeat": 1,
+  "tokens": null,
+  "renderable": true,
+  "complete": false,
+  "errs": [
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:header"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:statsCard"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:progressSummary"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:missingBadge"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:blockersAlert"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:standupTabs"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:tabViewUpdates"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:updatesAccordion"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:updateAlex"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:alexContent"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:updatePriya"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:priyaContent"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:updateMarcus"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:marcusContent"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:updateElena"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:elenaContent"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:updateDavid"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:davidContent"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:tabPostUpdate"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:postFormCard"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:postFormHeader"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:postForm"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:fieldStatus"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:statusSelect"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:statusWorking"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:statusBlocked"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:statusOoo"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:fieldYesterday"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:yesterdayInput"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:fieldToday"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:todayInput"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:fieldBlockers"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:blockersInput"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:formButtons"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:submitBtn"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:cancelBtn"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:tabMissingList"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:missingListBlock"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:missing1"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:missing2"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:missing3"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:quickFollowUp"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:fu1"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:fu2"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:fu3"
+   }
+  ],
+  "classes": [
+   "reference-graph"
+  ],
+  "n": 46
+ },
+ {
+  "fmt": "jsonrender_yaml",
+  "scenario": "b2-stock",
+  "axis": "reqs",
+  "repeat": 1,
+  "tokens": null,
+  "renderable": false,
+  "complete": false,
+  "errs": [
+   {
+    "cls": "malformed-syntax",
+    "detail": "yaml parse error: Nested mappings are not allowed in compact mappings at line 28, column 14:\n\n    "
+   }
+  ],
+  "classes": [
+   "malformed-syntax"
+  ]
+ },
+ {
+  "fmt": "jsonrender_yaml",
+  "scenario": "b2-support",
+  "axis": "reqs",
+  "repeat": 1,
+  "tokens": null,
+  "renderable": true,
+  "complete": true,
+  "errs": [],
+  "classes": [],
+  "n": 44
+ },
+ {
+  "fmt": "jsonrender_yaml",
+  "scenario": "b3-clinic",
+  "axis": "reqs",
+  "repeat": 1,
+  "tokens": null,
+  "renderable": false,
+  "complete": false,
+  "errs": [
+   {
+    "cls": "malformed-syntax",
+    "detail": "yaml parse error: Nested mappings are not allowed in compact mappings at line 66, column 13:\n\n    "
+   }
+  ],
+  "classes": [
+   "malformed-syntax"
+  ]
+ },
+ {
+  "fmt": "jsonrender_yaml",
+  "scenario": "b3-content",
+  "axis": "reqs",
+  "repeat": 1,
+  "tokens": null,
+  "renderable": false,
+  "complete": false,
+  "errs": [
+   {
+    "cls": "malformed-syntax",
+    "detail": "yaml parse error: Nested mappings are not allowed in compact mappings at line 444, column 20:\n\n   "
+   }
+  ],
+  "classes": [
+   "malformed-syntax"
+  ]
+ },
+ {
+  "fmt": "jsonrender_yaml",
+  "scenario": "b3-crm",
+  "axis": "reqs",
+  "repeat": 1,
+  "tokens": null,
+  "renderable": true,
+  "complete": true,
+  "errs": [],
+  "classes": [],
+  "n": 60
+ },
+ {
+  "fmt": "jsonrender_yaml",
+  "scenario": "b3-finance",
+  "axis": "reqs",
+  "repeat": 1,
+  "tokens": null,
+  "renderable": true,
+  "complete": true,
+  "errs": [],
+  "classes": [],
+  "n": 46
+ },
+ {
+  "fmt": "jsonrender_yaml",
+  "scenario": "b3-freight",
+  "axis": "reqs",
+  "repeat": 1,
+  "tokens": null,
+  "renderable": false,
+  "complete": false,
+  "errs": [
+   {
+    "cls": "malformed-syntax",
+    "detail": "yaml parse error: Nested mappings are not allowed in compact mappings at line 19, column 17:\n\n    "
+   }
+  ],
+  "classes": [
+   "malformed-syntax"
+  ]
+ },
+ {
+  "fmt": "jsonrender_yaml",
+  "scenario": "b3-hr",
+  "axis": "reqs",
+  "repeat": 1,
+  "tokens": null,
+  "renderable": true,
+  "complete": false,
+  "errs": [
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:header_card"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:header_info"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:main_heading"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:sub_text"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:new_role_dialog"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:new_role_form"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:role_title_fc"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:role_title_input"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:dept_fc"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:dept_select"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:d_eng"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:d_prod"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:d_sales"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:d_mktg"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:d_ops"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:type_fc"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:type_select"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:t_ft"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:t_pt"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:t_contract"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:form_buttons"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:submit_role_btn"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:kpis_row"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:kpi_headcount"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:hc_val"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:hc_lbl"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:kpi_open_roles"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:roles_val"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:roles_lbl"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:kpi_time_to_hire"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:tth_val"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:tth_lbl"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:kpi_attrition"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:att_val"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:att_lbl"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:row_1"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:open_roles_card"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:roles_header"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:roles_table"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:col_role_title"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:col_role_dept"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:col_role_applicants"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:col_role_status"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:dept_headcount_card"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:dept_hc_header"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:dept_pie"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:row_2"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:pipeline_card"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:pipeline_header"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:pipeline_chart"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:pipeline_series"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:attrition_card"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:attrition_header"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:attrition_chart"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:attrition_series"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:interviews_card"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:interviews_header"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:interviews_table"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:col_int_cand"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:col_int_role"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:col_int_dept"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:col_int_time"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:col_int_interviewer"
+   }
+  ],
+  "classes": [
+   "reference-graph"
+  ],
+  "n": 64
+ },
+ {
+  "fmt": "jsonrender_yaml",
+  "scenario": "b3-learning",
+  "axis": "reqs",
+  "repeat": 1,
+  "tokens": null,
+  "renderable": false,
+  "complete": false,
+  "errs": [
+   {
+    "cls": "malformed-syntax",
+    "detail": "yaml parse error: Nested mappings are not allowed in compact mappings at line 106, column 20:\n\n   "
+   }
+  ],
+  "classes": [
+   "malformed-syntax"
+  ]
+ },
+ {
+  "fmt": "jsonrender_yaml",
+  "scenario": "b3-marketing",
+  "axis": "reqs",
+  "repeat": 1,
+  "tokens": null,
+  "renderable": false,
+  "complete": false,
+  "errs": [
+   {
+    "cls": "malformed-syntax",
+    "detail": "yaml parse error: Nested mappings are not allowed in compact mappings at line 87, column 14:\n\n    "
+   }
+  ],
+  "classes": [
+   "malformed-syntax"
+  ]
+ },
+ {
+  "fmt": "jsonrender_yaml",
+  "scenario": "b3-orders",
+  "axis": "reqs",
+  "repeat": 1,
+  "tokens": null,
+  "renderable": true,
+  "complete": false,
+  "errs": [
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:header"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:kpis_container"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:kpi_card_1"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:kpi_label_1"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:kpi_val_1"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:kpi_badge_1"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:kpi_card_2"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:kpi_label_2"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:kpi_val_2"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:kpi_badge_2"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:kpi_card_3"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:kpi_label_3"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:kpi_val_3"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:kpi_badge_3"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:kpi_card_4"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:kpi_label_4"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:kpi_val_4"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:kpi_badge_4"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:chart_card"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:chart_heading"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:volume_chart"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:vol_series"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:orders_container"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:orders_header"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:filter_form"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:customer_search_fc"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:customer_search_input"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:status_filter_fc"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:status_select"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:opt_all"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:opt_pending"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:opt_processing"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:opt_fulfilled"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:opt_cancelled"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:filter_buttons"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:btn_apply_filters"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:btn_clear_filters"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:orders_table"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:col_id"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:col_customer"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:col_total"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:col_status"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:fulfillment_dialog"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:fulfill_form"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:fulfill_id_fc"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:fulfill_id_select"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:f_opt_1"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:f_opt_2"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:tracking_fc"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:tracking_input"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:carrier_fc"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:carrier_select"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:c_ups"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:c_fedex"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:c_usps"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:c_dhl"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:fulfill_buttons"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:btn_confirm_fulfill"
+   }
+  ],
+  "classes": [
+   "reference-graph"
+  ],
+  "n": 59
+ },
+ {
+  "fmt": "jsonrender_yaml",
+  "scenario": "b3-server",
+  "axis": "reqs",
+  "repeat": 1,
+  "tokens": null,
+  "renderable": false,
+  "complete": false,
+  "errs": [
+   {
+    "cls": "malformed-syntax",
+    "detail": "yaml parse error: Nested mappings are not allowed in compact mappings at line 208, column 14:\n\n   "
+   }
+  ],
+  "classes": [
+   "malformed-syntax"
+  ]
+ },
+ {
+  "fmt": "jsonrender_yaml",
+  "scenario": "b4-airline",
+  "axis": "reqs",
+  "repeat": 1,
+  "tokens": null,
+  "renderable": false,
+  "complete": false,
+  "errs": [
+   {
+    "cls": "malformed-syntax",
+    "detail": "yaml parse error: Nested mappings are not allowed in compact mappings at line 93, column 14:\n\n    "
+   }
+  ],
+  "classes": [
+   "malformed-syntax"
+  ]
+ },
+ {
+  "fmt": "jsonrender_yaml",
+  "scenario": "b4-bank",
+  "axis": "reqs",
+  "repeat": 1,
+  "tokens": null,
+  "renderable": false,
+  "complete": false,
+  "errs": [
+   {
+    "cls": "malformed-syntax",
+    "detail": "yaml parse error: Nested mappings are not allowed in compact mappings at line 160, column 17:\n\n   "
+   }
+  ],
+  "classes": [
+   "malformed-syntax"
+  ]
+ },
+ {
+  "fmt": "jsonrender_yaml",
+  "scenario": "b4-creator",
+  "axis": "reqs",
+  "repeat": 1,
+  "tokens": null,
+  "renderable": true,
+  "complete": false,
+  "errs": [
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:header"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:filter_card"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:filter_label"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:filter_select"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:p_all"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:p_yt"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:p_ig"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:p_tt"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:p_x"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:kpi_card"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:kpi1"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:kpi1_title"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:kpi1_val"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:kpi1_sub"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:kpi2"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:kpi2_title"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:kpi2_val"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:kpi2_sub"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:kpi3"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:kpi3_title"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:kpi3_val"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:kpi3_sub"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:kpi4"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:kpi4_title"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:kpi4_val"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:kpi4_sub"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:tabs"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:tab_perf"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:perf_heading"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:audience_chart_card"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:aud_title"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:aud_chart"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:top_posts_card"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:posts_title"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:top_posts_table"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:col_post_title"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:col_platform"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:col_reach"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:col_eng"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:tab_sched"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:sched_heading"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:scheduled_list_card"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:sched_title"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:scheduled_list"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:item_s1"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:item_s2"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:item_s3"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:schedule_form_card"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:form_title"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:schedule_form"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:field_platform"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:select_sched_platform"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:sp_yt"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:sp_ig"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:sp_tt"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:sp_x"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:field_caption"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:input_caption"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:field_date"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:input_date"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:form_btns"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:btn_submit_sched"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:btn_draft_sched"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:tab_inbox"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:inbox_heading"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:comments_card"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:comments_title"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:comments_accordion"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:comm_1"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:comm_1_text"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:comm_1_reply_form"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:c1_input_field"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:c1_input"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:c1_btns"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:c1_send"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:comm_2"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:comm_2_text"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:comm_2_reply_form"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:c2_input_field"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:c2_input"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:c2_btns"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:c2_send"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:comm_3"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:comm_3_text"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:comm_3_reply_form"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:c3_input_field"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:c3_input"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:c3_btns"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:c3_send"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:collabs_card"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:collabs_title"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:collabs_list"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:collab_1"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:collab_2"
+   },
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:collab_3"
+   }
+  ],
+  "classes": [
+   "reference-graph"
+  ],
+  "n": 96
+ },
+ {
+  "fmt": "jsonrender_yaml",
+  "scenario": "b4-hospital",
+  "axis": "reqs",
+  "repeat": 1,
+  "tokens": null,
+  "renderable": false,
+  "complete": false,
+  "errs": [
+   {
+    "cls": "malformed-syntax",
+    "detail": "yaml parse error: Nested mappings are not allowed in compact mappings at line 325, column 20:\n\n   "
+   }
+  ],
+  "classes": [
+   "malformed-syntax"
+  ]
+ },
+ {
+  "fmt": "jsonrender_yaml",
+  "scenario": "b4-portfolio",
+  "axis": "reqs",
+  "repeat": 1,
+  "tokens": null,
+  "renderable": false,
+  "complete": false,
+  "errs": [
+   {
+    "cls": "malformed-syntax",
+    "detail": "yaml parse error: Nested mappings are not allowed in compact mappings at line 526, column 20:\n\n   "
+   }
+  ],
+  "classes": [
+   "malformed-syntax"
+  ]
+ },
+ {
+  "fmt": "jsonrender_yaml",
+  "scenario": "b4-power",
+  "axis": "reqs",
+  "repeat": 1,
+  "tokens": null,
+  "renderable": false,
+  "complete": false,
+  "errs": [
+   {
+    "cls": "malformed-syntax",
+    "detail": "yaml parse error: Nested mappings are not allowed in compact mappings at line 197, column 14:\n\n   "
+   }
+  ],
+  "classes": [
+   "malformed-syntax"
+  ]
+ },
+ {
+  "fmt": "jsonrender_yaml",
+  "scenario": "b4-retail",
+  "axis": "reqs",
+  "repeat": 1,
+  "tokens": null,
+  "renderable": false,
+  "complete": false,
+  "errs": [
+   {
+    "cls": "malformed-syntax",
+    "detail": "yaml parse error: Nested mappings are not allowed in compact mappings at line 211, column 14:\n\n   "
+   }
+  ],
+  "classes": [
+   "malformed-syntax"
+  ]
+ },
+ {
+  "fmt": "jsonrender_yaml",
+  "scenario": "b4-saas",
+  "axis": "reqs",
+  "repeat": 1,
+  "tokens": null,
+  "renderable": false,
+  "complete": false,
+  "errs": [
+   {
+    "cls": "malformed-syntax",
+    "detail": "yaml parse error: Nested mappings are not allowed in compact mappings at line 197, column 13:\n\n   "
+   }
+  ],
+  "classes": [
+   "malformed-syntax"
+  ]
+ },
+ {
+  "fmt": "jsonrender_yaml",
+  "scenario": "b5-city",
+  "axis": "reqs",
+  "repeat": 1,
+  "tokens": null,
+  "renderable": true,
+  "complete": false,
+  "errs": [
+   {
+    "cls": "reference-graph",
+    "detail": "orphan:water_card_text"
+   }
+  ],
+  "classes": [
+   "reference-graph"
+  ],
+  "n": 130
+ },
+ {
+  "fmt": "jsonrender_yaml",
+  "scenario": "b5-disaster",
+  "axis": "reqs",
+  "repeat": 1,
+  "tokens": null,
+  "renderable": false,
+  "complete": false,
+  "errs": [
+   {
+    "cls": "malformed-syntax",
+    "detail": "yaml parse error: Implicit keys need to be on a single line at line 1, column 1:\n\n```yaml-spec\n^\n"
+   }
+  ],
+  "classes": [
+   "malformed-syntax"
+  ]
+ },
+ {
+  "fmt": "jsonrender_yaml",
+  "scenario": "b5-exec",
+  "axis": "reqs",
+  "repeat": 1,
+  "tokens": null,
+  "renderable": true,
+  "complete": true,
+  "errs": [],
+  "classes": [],
+  "n": 63
+ },
+ {
+  "fmt": "jsonrender_yaml",
+  "scenario": "b5-fund",
+  "axis": "reqs",
+  "repeat": 1,
+  "tokens": null,
+  "renderable": true,
+  "complete": true,
+  "errs": [],
+  "classes": [],
+  "n": 127
+ },
+ {
+  "fmt": "jsonrender_yaml",
+  "scenario": "b5-game",
+  "axis": "reqs",
+  "repeat": 1,
+  "tokens": null,
+  "renderable": true,
+  "complete": true,
+  "errs": [],
+  "classes": [],
+  "n": 100
+ },
+ {
+  "fmt": "jsonrender_yaml",
+  "scenario": "b5-plant",
+  "axis": "reqs",
+  "repeat": 1,
+  "tokens": null,
+  "renderable": false,
+  "complete": false,
+  "errs": [
+   {
+    "cls": "malformed-syntax",
+    "detail": "yaml parse error: Nested mappings are not allowed in compact mappings at line 32, column 17:\n\n    "
+   }
+  ],
+  "classes": [
+   "malformed-syntax"
+  ]
+ },
+ {
+  "fmt": "jsonrender_yaml",
+  "scenario": "b5-streaming",
+  "axis": "reqs",
+  "repeat": 1,
+  "tokens": null,
+  "renderable": false,
+  "complete": false,
+  "errs": [
+   {
+    "cls": "malformed-syntax",
+    "detail": "yaml parse error: Nested mappings are not allowed in compact mappings at line 588, column 20:\n\n   "
+   }
+  ],
+  "classes": [
+   "malformed-syntax"
+  ]
+ },
+ {
+  "fmt": "jsonrender_yaml",
+  "scenario": "b5-university",
+  "axis": "reqs",
+  "repeat": 1,
+  "tokens": null,
+  "renderable": false,
+  "complete": false,
+  "errs": [
+   {
+    "cls": "malformed-syntax",
+    "detail": "yaml parse error: Nested mappings are not allowed in compact mappings at line 209, column 20:\n\n   "
+   }
+  ],
+  "classes": [
+   "malformed-syntax"
+  ]
+ }
+]
