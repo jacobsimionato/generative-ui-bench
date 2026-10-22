@@ -27,10 +27,30 @@ const norm = (catalog: Catalog) =>
       .sort((a, b) => String(a[0]).localeCompare(String(b[0]))),
   );
 
+function extractA2uiCompiledCatalog(): Catalog {
+  const schema = JSON.parse(readFileSync(join(ROOT, "protocols/a2ui/catalog-a2ui.json"), "utf8"));
+  const common = schema.$defs?.CatalogComponentCommon?.properties ?? {};
+  const res: Catalog = {};
+  for (const [name, comp] of Object.entries<any>(schema.components)) {
+    const directObj = comp.allOf?.find((s: any) => s.properties);
+    const directProps = directObj?.properties ?? {};
+    const allProps = { ...common, ...directProps };
+    delete allProps.component; // standard discriminator
+    const reqList = directObj?.required ?? comp.required ?? [];
+    res[name] = {
+      props: Object.entries<any>(allProps).map(([pn, pdef]) => [
+        pn,
+        { req: reqList.includes(pn), enum: pdef.enum ?? null },
+      ]),
+    };
+  }
+  return res;
+}
+
 const surfaces: Record<string, Catalog> = {
   openui: OPENUI_CATALOG,
   jsonrender: JR_CATALOG,
-  a2ui: JSON.parse(readFileSync(join(ROOT, "protocols/a2ui/catalog-surface.json"), "utf8")),
+  a2ui: extractA2uiCompiledCatalog(),
 };
 
 const want = norm(reference);
