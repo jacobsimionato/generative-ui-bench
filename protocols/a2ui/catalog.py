@@ -14,12 +14,34 @@ Writes:
 import json
 import os
 
-from a2ui.basic_catalog.provider import BundledCatalogProvider
-from a2ui.schema.constants import (
-    CATALOG_COMPONENTS_KEY,
-    CATALOG_ID_KEY,
-    VERSION_0_9,
-)
+CATALOG_COMPONENTS_KEY = "components"
+CATALOG_ID_KEY = "catalogId"
+VERSION_0_9 = "v0.9"
+
+THEME_DEF = {
+    "type": "object",
+    "properties": {
+        "primaryColor": {
+            "type": "string",
+            "description": (
+                "The primary brand color used for highlights (e.g., primary buttons,"
+                " active borders). Renderers may generate variants of this color for different contexts."
+                " Format: Hexadecimal code (e.g., '#00BFFF')."
+            ),
+            "pattern": "^#[0-9a-fA-F]{6}$",
+        },
+        "iconUrl": {
+            "type": "string",
+            "format": "uri",
+            "description": "A URL for an image that identifies the agent or tool associated with the surface.",
+        },
+        "agentDisplayName": {
+            "type": "string",
+            "description": "Text to be displayed next to the surface to identify the agent or tool that created it.",
+        },
+    },
+    "additionalProperties": True,
+}
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 CATALOG_PATH = os.path.join(HERE, "catalog-a2ui.json")
@@ -645,10 +667,6 @@ def component_schema(name, spec):
 
 
 def build_catalog():
-    # $defs.CatalogComponentCommon and $defs.theme come from the SDK's own
-    # bundled v0.9 basic catalog rather than being hand-written.
-    basic = BundledCatalogProvider(VERSION_0_9).load()
-
     components = {name: component_schema(name, spec) for name, spec in COMPONENTS}
     any_component = {
         "oneOf": [{"$ref": f"#/components/{name}"} for name in components],
@@ -662,8 +680,11 @@ def build_catalog():
         CATALOG_ID_KEY: CATALOG_ID,
         CATALOG_COMPONENTS_KEY: components,
         "$defs": {
-            "CatalogComponentCommon": basic["$defs"]["CatalogComponentCommon"],
-            "theme": basic["$defs"]["theme"],
+            "CatalogComponentCommon": {
+                "type": "object",
+                "properties": {},
+            },
+            "theme": THEME_DEF,
             "anyComponent": any_component,
         },
     }

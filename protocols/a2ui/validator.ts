@@ -1,6 +1,6 @@
 // A2UI evaluation stage 2: the official @a2ui/web_core (v0_9) renderer gate,
 // merged with the row verdict built from score.py's official SDK output.
-import { readFileSync } from "node:fs";
+import { readFileSync, existsSync } from "node:fs";
 import { join, dirname } from "node:path";
 import { fileURLToPath } from "node:url";
 import { createRequire } from "node:module";
@@ -59,7 +59,11 @@ const CATALOG: Record<string, { props: [string, PropType][] }> = JSON.parse(
 const CATALOG_ID: string = JSON.parse(
   readFileSync(join(__dirname, "catalog-a2ui.json"), "utf8"),
 ).catalogId;
-const PY = process.env.A2UI_PYTHON ?? "python3";
+const PY =
+  process.env.A2UI_PYTHON ??
+  (existsSync(join(__dirname, "../../../.venv/bin/python"))
+    ? join(__dirname, "../../../.venv/bin/python")
+    : "python3");
 
 // Scalar props take web_core's Dynamic* schemas: a2ui props are data-bindable
 // by design, so a literal-only schema would reject valid bindings.
@@ -72,7 +76,7 @@ function zodFor(ty: PropType) {
     case "boolean":
       return DynamicBooleanSchema;
     case "array":
-      return z.array(z.any());
+      return z.union([z.array(z.any()), z.record(z.any())]);
     case "ref":
       return ComponentIdSchema;
     case "refs":
@@ -141,11 +145,14 @@ export function evalA2uiRenderer(messages: unknown[]) {
 
 export function rowFromScore(s: A2uiScore, { reqs = 0 } = {}): Verdict {
   const errs: BenchError[] = [];
-  if (!s.parse_ok)
-    errs.push({
-      cls: "malformed-syntax",
-      detail: String(s.errors?.[0] ?? "parse failed").slice(0, 100),
-    });
+  if (!s.parse_ok) {
+    const msg = String(s.errors?.[0] ?? "parse failed");
+    let cls = "malformed-syntax";
+    if (/enum|one of|allowed values|const/i.test(msg)) cls = "enum-mismatch";
+    else if (/required/i.test(msg)) cls = "required-field";
+    else if (/property .* is not a valid property/i.test(msg)) cls = "signature-mismatch";
+    errs.push({ cls, detail: msg.slice(0, 100) });
+  }
   // Full-payload SDK validation exceptions (envelope, topology) are recorded
   // even when parsing succeeded; consume them so they cannot vanish.
   if (s.parse_ok) {

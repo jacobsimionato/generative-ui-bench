@@ -1,0 +1,304 @@
+## Workflow Description:
+# A2UI Express DSL Output Contract
+
+You must output the user interface using A2UI Express.
+
+IMPORTANT: You MUST always surround the entire A2UI Express block with the sentinel tags `<a2ui>` and `</a2ui>`.
+
+The host compiler will compile your A2UI Express output into the correct JSON envelopes automatically.
+
+## Grammar Rules
+
+1. Component constructors can be assigned to variables or nested inline inside parent component arguments:
+   header = ComponentA(prop1="val1")
+   root = ComponentB([header, ComponentC("Click", action=Event("submit"))])
+
+   Keyword arguments (`param=value`) and positional arguments with `_` placeholders are supported.
+
+   Variable names MUST start with a letter or underscore, and only contain letters, digits, and underscores.
+
+2. The interface tree must have a single entry point assigned to the reserved variable 'root'.
+
+3. Primitives:
+   - Strings: Quoted with `"` or `"""`. Support for `\n`, `\t`, `\\`, and `\"` escapes.
+     Raw Strings: Prefaced by `r` (e.g., `r"..."` or `r"""..."""`), with no escape processing.
+   - Numbers: write as integers or decimals, e.g., 42
+   - Booleans: write true or false
+   - Null values: write null
+   - Dates & Times: Values for date-time inputs (e.g. in DateTimeInput) must strictly use RFC 3339 format with a timezone offset (e.g. "2026-03-14T00:00:00Z").
+
+4. Lists: represent as arrays, e.g., [child1, child2].
+
+5. Maps: represent as key-value blocks, e.g., {title: "Overview", child: contentCol}. Map keys are always literal strings (dynamic variable resolution is not supported for keys).
+
+6. Data bindings: prefix absolute paths in the data model with '$', e.g., $/user/firstName.
+   Prefix relative list scopes with '$', e.g., $firstName.
+   A lone '$' represents an empty relative path which resolves to the root of the current context (e.g. inside a template, representing the entire item itself).
+
+7. Logic and validation: prefix client check rules with '?', e.g., ?required or ?regex("^[0-9]{5}$"). To specify a custom error message for validation failures, append it as an extra string argument, e.g. ?regex("^[0-9]{5}$", "Postal code must be 5 digits").
+
+8. Action events: represent server-side actions using the Event helper:
+   Event("save_deal", {rep: $/form/rep})
+
+9. Nested functions: call client functions directly using catalog signatures, for example myFunction("value").
+
+10. Data model population: Assign a value directly to an absolute data path (e.g. $/path/to/key = "value") to populate or initialize values inside the shared dataModel. The value can be a primitive, array, or map.
+
+11. Dynamic list templates: If a component expects a template child list, represent it using the _template helper:
+    _template($/path/to/list, itemTemplate)
+    And define the template component variable on another line, utilizing relative path references prefixed with $:
+    itemTemplate = Image($url)
+
+12. To delete a user interface surface, output the standalone `deleteSurface(surfaceId)` command (no variable assignment):
+    deleteSurface("dashboard-surface-1")
+
+13. Static properties: Arguments annotated with '(static)' in the signatures below MUST be defined as literal values or arrays inline. You CANNOT use a dynamic data binding path (prefixed by $) for these arguments.
+
+14. Required actions: Parameters named 'action' (or annotated in component signatures) are strictly required. You must pass a valid Event (e.g. Event("click")) or function call. If no specific action is described in the user request, you must provide a dummy click event like Event("click") instead of passing null or omitting the parameter.
+
+15. Surface targeting: Output `surface(surfaceId)` to specify or target a user interface surface:
+    surface("dashboard-surface-1")
+    root = Form(...)
+
+## Positional Component Signatures
+
+Use these exact positional signatures to instantiate components. Do not output property keys:
+• Accordion(items (static))
+  - Description: Collapsible sections
+  - items: A static list of child component IDs.
+• AccordionItem(value (static), trigger (static), content (static))
+  - Description: value is unique id, trigger is section title
+  - content: A static list of child component IDs.
+• Alert(title (static), description (static), variant? (static))
+  - Description: Alert banner with icon, title, and description
+  - variant: Must be one of: 'default', 'destructive', 'info', 'success', 'warning'
+• AlertDialogBlock(triggerLabel (static), title (static), description (static), confirmLabel? (static), cancelLabel? (static), triggerVariant? (static))
+  - Description: Button that opens a confirm/cancel dialog
+  - triggerVariant: Must be one of: 'default', 'destructive', 'outline', 'secondary', 'ghost', 'link'
+• AreaChart(labels (static), series (static), variant? (static), xLabel? (static), yLabel? (static))
+  - Description: Filled area under lines; use for cumulative totals or volume trends over time
+  - labels: A data array (literal JSON values).
+  - series: A static list of child component IDs.
+  - variant: Must be one of: 'linear', 'natural', 'step'
+• Avatar(src? (static), alt? (static), fallback (static))
+  - Description: Avatar image with a text fallback
+• Badge(text (static), variant? (static))
+  - Description: Small status or category badge
+  - variant: Must be one of: 'default', 'secondary', 'destructive', 'outline', 'ghost', 'link'
+• BarChart(labels (static), series (static), variant? (static), xLabel? (static), yLabel? (static))
+  - Description: Vertical bars; use for comparing values across categories with one or more series
+  - labels: A data array (literal JSON values).
+  - series: A static list of child component IDs.
+  - variant: Must be one of: 'grouped', 'stacked'
+• Blockquote(text (static), cite? (static))
+  - Description: Quoted text with an optional citation
+• Button(label (static), action? (static), variant? (static), type? (static), size? (static))
+  - Description: Clickable button
+  - action: A data array (literal JSON values).
+  - variant: Must be one of: 'primary', 'secondary', 'tertiary'
+  - type: Must be one of: 'normal', 'destructive'
+  - size: Must be one of: 'extra-small', 'small', 'medium', 'large'
+• Buttons(buttons (static), direction? (static))
+  - Description: Group of Button components. direction: "row" (default) | "column".
+  - buttons: A static list of child component IDs.
+  - direction: Must be one of: 'row', 'column'
+• CalendarBlock(mode? (static), defaultMonth? (static), numberOfMonths? (static), captionLayout? (static))
+  - Description: Inline calendar
+  - mode: Must be one of: 'single', 'multiple', 'range'
+  - captionLayout: Must be one of: 'label', 'dropdown'
+• Callout(variant (static), title (static), description (static))
+  - Description: Callout banner. Optional visible is a reactive $boolean — auto-dismisses after 3s by setting $visible to false.
+  - variant: Must be one of: 'info', 'warning', 'error', 'success', 'neutral'
+• Card(children, variant? (static), direction? (static), gap? (static), align? (static), justify? (static), wrap? (static))
+  - Description: Styled container. variant: "card" (default, elevated) | "sunk" (recessed) | "clear" (transparent). Always full width. Accepts all Stack flex params (default: di
+  - children: Defines the children. Children cannot be defined inline, they must be referred to by ID.
+  - variant: Must be one of: 'card', 'sunk', 'clear'
+  - direction: Must be one of: 'row', 'column'
+  - gap: Must be one of: 'none', 'xs', 's', 'm', 'l', 'xl', '2xl'
+  - align: Must be one of: 'start', 'center', 'end', 'stretch', 'baseline'
+  - justify: Must be one of: 'start', 'center', 'end', 'between', 'around', 'evenly'
+• CardHeader(title? (static), subtitle? (static))
+  - Description: Header with optional title and subtitle
+• Carousel(children (static), variant? (static))
+  - Description: Horizontal scrollable carousel
+  - children: A data array (literal JSON values).
+  - variant: Must be one of: 'card', 'sunk'
+• CheckBoxGroup(name (static), items (static), rules? (static), value? (static))
+  - Description: CheckBoxGroup
+  - items: A static list of child component IDs.
+  - rules: A data array (literal JSON values).
+  - value: A data array (literal JSON values).
+• CheckBoxItem(label (static), description (static), name (static), defaultChecked? (static))
+  - Description: CheckBoxItem
+• CodeBlock(language (static), codeString (static))
+  - Description: Syntax-highlighted code block
+• Col(label (static), data (static), type? (static))
+  - Description: Column definition — holds label + data array
+  - data: A data array (literal JSON values).
+  - type: Must be one of: 'string', 'number', 'action'
+• DatePicker(name (static), mode? (static), rules? (static), value? (static))
+  - Description: DatePicker
+  - mode: Must be one of: 'single', 'range'
+  - rules: A data array (literal JSON values).
+  - value: A data array (literal JSON values).
+• DialogBlock(triggerLabel (static), title (static), description? (static), content? (static), triggerVariant? (static))
+  - Description: Button that opens a modal dialog with content
+  - content: A static list of child component IDs.
+  - triggerVariant: Must be one of: 'default', 'destructive', 'outline', 'secondary', 'ghost', 'link'
+• DrawerBlock(triggerLabel (static), title (static), description? (static), content? (static))
+  - Description: Button that opens a slide-out drawer with content
+  - content: A static list of child component IDs.
+• FollowUpBlock(items (static))
+  - Description: List of clickable follow-up suggestions placed at the end of a response
+  - items: A static list of child component IDs.
+• FollowUpItem(text (static))
+  - Description: Clickable follow-up suggestion; when clicked, sends text as user message
+• Form(name (static), buttons (component ID), fields (static))
+  - Description: Form container with fields and explicit action buttons
+  - buttons: The ID of the referenced child component.
+  - fields: A static list of child component IDs.
+• FormControl(label (static), input (component ID), hint? (static))
+  - Description: Field with label, input component, and optional hint text
+  - input: The ID of the referenced child component.
+• Heading(text (static), level? (static))
+  - Description: Standalone heading
+  - level: Must be one of: 'h1', 'h2', 'h3', 'h4'
+• HorizontalBarChart(labels (static), series (static), variant? (static), xLabel? (static), yLabel? (static))
+  - Description: Horizontal bars; prefer when category labels are long or for ranked lists
+  - labels: A data array (literal JSON values).
+  - series: A static list of child component IDs.
+  - variant: Must be one of: 'grouped', 'stacked'
+• Image(alt (static), src? (static))
+  - Description: Image with alt text and optional URL
+• ImageBlock(src (static), alt? (static))
+  - Description: Image block with loading state
+• ImageGallery(images (static))
+  - Description: Gallery grid of images with modal preview
+  - images: A data array (literal JSON values).
+• InlineCode(code (static))
+  - Description: Inline code span
+• Input(name (static), placeholder? (static), type? (static), rules? (static), value? (static))
+  - Description: Input
+  - type: Must be one of: 'text', 'email', 'password', 'number', 'url'
+  - rules: A data array (literal JSON values).
+• Label(text (static))
+  - Description: Text label
+• LineChart(labels (static), series (static), variant? (static), xLabel? (static), yLabel? (static))
+  - Description: Lines over categories; use for trends and continuous data over time
+  - labels: A data array (literal JSON values).
+  - series: A static list of child component IDs.
+  - variant: Must be one of: 'linear', 'natural', 'step'
+• ListBlock(items (static), variant? (static))
+  - Description: A list of items with number or image indicators
+  - items: A static list of child component IDs.
+  - variant: Must be one of: 'number', 'image'
+• ListItem(title (static), subtitle? (static), image? (static), actionLabel? (static))
+  - Description: List row with a title, optional subtitle and image
+  - image: A data array (literal JSON values).
+• MarkDownRenderer(textMarkdown (static), variant? (static))
+  - Description: Renders markdown text with optional container variant
+  - variant: Must be one of: 'clear', 'card', 'sunk'
+• PaginationBlock(currentPage (static), totalPages (static))
+  - Description: Page navigation for long result sets
+• PieChart(labels (static), values (static), variant? (static), appearance? (static))
+  - Description: Circular slices; use plucked arrays: PieChart(data.categories, data.values)
+  - labels: A data array (literal JSON values).
+  - values: A data array (literal JSON values).
+  - variant: Must be one of: 'pie', 'donut'
+  - appearance: Must be one of: 'circular', 'semiCircular'
+• Point(x (static), y (static), z? (static))
+  - Description: Data point with numeric coordinates
+• Progress(value (static), label? (static))
+  - Description: Progress bar with an optional label
+• RadarChart(labels (static), series (static))
+  - Description: Spider/web chart; use for comparing multiple variables across one or more entities
+  - labels: A data array (literal JSON values).
+  - series: A static list of child component IDs.
+• RadialChart(labels (static), values (static))
+  - Description: Radial bars; use plucked arrays: RadialChart(data.categories, data.values)
+  - labels: A data array (literal JSON values).
+  - values: A data array (literal JSON values).
+• RadioGroup(name (static), items (static), defaultValue? (static), rules? (static), value? (static))
+  - Description: RadioGroup
+  - items: A static list of child component IDs.
+  - rules: A data array (literal JSON values).
+• RadioItem(label (static), description (static), value (static))
+  - Description: RadioItem
+• ScatterChart(datasets (static), xLabel? (static), yLabel? (static))
+  - Description: X/Y scatter plot; use for correlations, distributions, and clustering
+  - datasets: A static list of child component IDs.
+• ScatterSeries(name (static), points (static))
+  - Description: Named dataset
+  - points: A static list of child component IDs.
+• SectionBlock(sections (static), isFoldable? (static))
+  - Description: Collapsible accordion sections; use SectionItem for each section
+  - sections: A static list of child component IDs.
+• SectionItem(value (static), trigger (static), content (static))
+  - Description: Section with a label and collapsible content, used inside SectionBlock
+  - content: A static list of child component IDs.
+• Select(name (static), items (static), placeholder? (static), rules? (static), value? (static), size? (static))
+  - Description: Select
+  - items: A static list of child component IDs.
+  - rules: A data array (literal JSON values).
+  - size: Must be one of: 'small', 'medium', 'large'
+• SelectItem(value (static), label (static))
+  - Description: Option for Select
+• Separator(orientation? (static), decorative? (static))
+  - Description: Visual divider between content sections
+  - orientation: Must be one of: 'horizontal', 'vertical'
+• Series(category (static), values (static))
+  - Description: One data series
+  - values: A data array (literal JSON values).
+• SingleStackedBarChart(labels (static), values (static))
+  - Description: Single horizontal stacked bar; use plucked arrays: SingleStackedBarChart(data.categories, data.values)
+  - labels: A data array (literal JSON values).
+  - values: A data array (literal JSON values).
+• Slice(category (static), value (static))
+  - Description: One slice with label and numeric value
+• Slider(name (static), variant (static), min (static), max (static), step? (static), defaultValue? (static), label? (static), rules? (static), value? (static))
+  - Description: Numeric slider input; supports continuous and discrete (stepped) variants
+  - variant: Must be one of: 'continuous', 'discrete'
+  - defaultValue: A data array (literal JSON values).
+  - rules: A data array (literal JSON values).
+  - value: A data array (literal JSON values).
+• Steps(items (static))
+  - Description: Step-by-step guide
+  - items: A static list of child component IDs.
+• StepsItem(title (static), details (static))
+  - Description: title and details text for one step
+• SwitchGroup(name (static), items (static), variant? (static), value? (static))
+  - Description: Group of switch toggles
+  - items: A static list of child component IDs.
+  - variant: Must be one of: 'clear', 'card', 'sunk'
+  - value: A data array (literal JSON values).
+• SwitchItem(label? (static), description? (static), name (static), defaultChecked? (static))
+  - Description: Individual switch toggle
+• TabItem(value (static), trigger (static), content (static))
+  - Description: value is unique id, trigger is tab label, content is array of components
+  - content: A static list of child component IDs.
+• Table(columns (static))
+  - Description: Data table — column-oriented. Each Col holds its own data array.
+  - columns: A static list of child component IDs.
+• Tabs(items (static))
+  - Description: Tabbed container
+  - items: A static list of child component IDs.
+• Tag(text (static), icon? (static), size? (static), variant? (static))
+  - Description: Styled tag/badge with optional icon and variant
+  - size: Must be one of: 'sm', 'md', 'lg'
+  - variant: Must be one of: 'neutral', 'info', 'success', 'warning', 'danger'
+• TagBlock(tags (static))
+  - Description: tags is an array of strings
+  - tags: A data array (literal JSON values).
+• TextArea(name (static), placeholder? (static), rows? (static), rules? (static), value? (static))
+  - Description: TextArea
+  - rules: A data array (literal JSON values).
+• TextCallout(variant? (static), title? (static), description? (static))
+  - Description: Text callout with variant, title, and description
+  - variant: Must be one of: 'neutral', 'info', 'warning', 'success', 'danger'
+• TextContent(text (static), size? (static))
+  - Description: Text block. Supports markdown. Optional size: "small" | "default" | "large" | "small-heavy" | "large-heavy".
+  - size: Must be one of: 'small', 'default', 'large', 'small-heavy', 'large-heavy'
+
+## Positional Function Signatures
+
+Use these exact positional signatures to instantiate check rules or logic functions:

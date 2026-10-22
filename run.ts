@@ -31,6 +31,12 @@ import {
   systemPrompt as jrSystemPrompt,
   userPrompt as jrUserPrompt,
 } from "./protocols/jsonrender/prompt.ts";
+import {
+  systemPrompt as jrYamlSystemPrompt,
+  userPrompt as jrYamlUserPrompt,
+} from "./protocols/jsonrender_yaml/prompt.ts";
+import { systemPrompt as a2uiSystemPrompt } from "./protocols/a2ui/prompt.ts";
+import { systemPrompt as a2uiExpressSystemPrompt } from "./protocols/a2ui_express/prompt.ts";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
@@ -53,9 +59,19 @@ const FORMATS: Record<string, Format> = {
     system: () => jrSystemPrompt(),
     user: (brief) => jrUserPrompt(brief.prompt),
   },
+  jsonrender_yaml: {
+    dir: LABEL,
+    system: () => jrYamlSystemPrompt(),
+    user: (brief) => jrYamlUserPrompt(brief.prompt),
+  },
   a2ui: {
     dir: LABEL,
-    system: () => readFileSync(join(__dirname, "protocols/a2ui/system-prompt.txt"), "utf8"),
+    system: () => a2uiSystemPrompt(),
+    user: (brief) => brief.prompt,
+  },
+  a2ui_express: {
+    dir: LABEL,
+    system: () => a2uiExpressSystemPrompt(),
     user: (brief) => brief.prompt,
   },
 };
@@ -87,7 +103,12 @@ const KEY_ENV =
         : PROVIDER === "local"
           ? "LOCAL_API_KEY"
           : "OPENROUTER_API_KEY";
-const API_KEY = process.env[KEY_ENV] ?? (PROVIDER === "local" ? "local" : "");
+const API_KEY =
+  process.env[KEY_ENV] ??
+  (PROVIDER === "google" ? process.env.GEMINI_API_KEY : undefined) ??
+  (PROVIDER === "openai" ? process.env.OPENAI_API_KEY : undefined) ??
+  (PROVIDER === "anthropic" ? process.env.ANTHROPIC_API_KEY : undefined) ??
+  (PROVIDER === "local" ? "local" : "");
 if (!API_KEY) {
   console.error(`${KEY_ENV} not set`);
   process.exit(1);
@@ -141,10 +162,10 @@ async function generate(
               }
             : {
                 max_tokens: MAX_TOKENS,
-                ...((REASONING_OVERRIDE ?? REASONING)
+                ...(PROVIDER !== "google" && (REASONING_OVERRIDE ?? REASONING)
                   ? { reasoning: REASONING_OVERRIDE ?? REASONING }
                   : {}),
-                ...(PROVIDER_ORDER
+                ...(PROVIDER !== "google" && PROVIDER_ORDER
                   ? { provider: { order: PROVIDER_ORDER, allow_fallbacks: true } }
                   : {}),
               }),
@@ -187,11 +208,13 @@ async function generate(
       return {
         text: json.content?.map((c: { text?: string }) => c.text ?? "").join("") ?? "",
         truncated: json.stop_reason === "max_tokens",
+        usage: json.usage ?? null,
       };
     }
     return {
       text: json.choices[0]?.message?.content ?? "",
       truncated: json.choices[0]?.finish_reason === "length",
+      usage: json.usage ?? null,
     };
   }
 }
@@ -202,6 +225,13 @@ function markTruncated(dir: string, id: string) {
   const path = join(dir, "truncated.json");
   const list: string[] = existsSync(path) ? JSON.parse(readFileSync(path, "utf8")) : [];
   if (!list.includes(id)) writeFileSync(path, JSON.stringify([...list, id].sort(), null, 1));
+}
+
+function recordStat(dir: string, id: string, stat: any) {
+  const path = join(dir, "stats.json");
+  const data: Record<string, any> = existsSync(path) ? JSON.parse(readFileSync(path, "utf8")) : {};
+  data[id] = stat;
+  writeFileSync(path, JSON.stringify(data, null, 2));
 }
 
 type Task = { fmt: string; brief: Brief; r: number; system: string };
@@ -225,12 +255,15 @@ async function worker() {
     const file = join(dir, `${id}.txt`);
     const n = ++done;
     if (existsSync(file) && readFileSync(file, "utf8").trim().length > 0) continue;
+    const t0 = Date.now();
     try {
       const gen = await generate(t.system, FORMATS[t.fmt].user(t.brief));
+      const elapsed = Date.now() - t0;
       writeFileSync(file, gen.text);
       if (gen.truncated) markTruncated(dir, id);
+      if (gen.usage) recordStat(dir, id, { ...gen.usage, latencyMs: elapsed });
       console.log(
-        `[${n}/${total}] ${id} ${gen.text.length} chars${gen.truncated ? " (truncated)" : ""}`,
+        `[${n}/${total}] ${id} ${gen.text.length} chars (${(elapsed / 1000).toFixed(1)}s)${gen.truncated ? " (truncated)" : ""}`,
       );
     } catch (e) {
       console.log(`[${n}/${total}] ${id} ERROR ${(e as Error).message}`);

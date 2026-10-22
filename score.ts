@@ -12,9 +12,11 @@ import { fileURLToPath } from "node:url";
 import { SCENARIOS } from "./briefs/briefs.ts";
 import { evaluate as evalOpenui } from "./protocols/openui/validator.ts";
 import { evaluate as evalJr } from "./protocols/jsonrender/validator.ts";
+import { evaluate as evalJrYaml } from "./protocols/jsonrender_yaml/validator.ts";
 import { evalA2ui, type BenchError } from "./protocols/a2ui/validator.ts";
+import { evalA2uiExpress } from "./protocols/a2ui_express/validator.ts";
 
-export type Fmt = "openui" | "a2ui" | "jsonrender";
+export type Fmt = "openui" | "a2ui" | "a2ui_express" | "jsonrender" | "jsonrender_yaml";
 type EvalResult = {
   renderable: boolean;
   complete: boolean;
@@ -47,7 +49,13 @@ let a2uiReady = true;
 // Row order in the results files: openui, a2ui, jsonrender, each sorted by
 // filename. Keep stable so rescoring committed raws reproduces the committed
 // results byte for byte.
-const FMT_RANK: Record<Fmt, number> = { openui: 0, a2ui: 1, jsonrender: 2 };
+const FMT_RANK: Record<Fmt, number> = {
+  openui: 0,
+  a2ui: 1,
+  a2ui_express: 2,
+  jsonrender: 3,
+  jsonrender_yaml: 4,
+};
 
 // Scores one label from its raws. Recorded output-token counts survive
 // rescoring; they come from the generation-time API usage fields, which raws
@@ -69,7 +77,10 @@ export function scoreLabel(label: string): { rows: ResultRow[]; a2uiComplete: bo
     existsSync(truncPath) ? JSON.parse(readFileSync(truncPath, "utf8")) : [],
   );
   const files = readdirSync(dir)
-    .map((f) => ({ f, m: f.match(/^(openui|jsonrender|a2ui)__(.+)__r(\d+)\.txt$/) }))
+    .map((f) => ({
+      f,
+      m: f.match(/^(openui|jsonrender|jsonrender_yaml|a2ui|a2ui_express)__(.+)__r(\d+)\.txt$/),
+    }))
     .filter((x): x is { f: string; m: RegExpMatchArray } => x.m !== null)
     .sort((a, b) => FMT_RANK[a.m[1] as Fmt] - FMT_RANK[b.m[1] as Fmt] || a.f.localeCompare(b.f));
   for (const { f, m } of files) {
@@ -81,7 +92,7 @@ export function scoreLabel(label: string): { rows: ResultRow[]; a2uiComplete: bo
     const reqs = briefByName.get(scn)?.reqs ?? 0;
     const path = join(dir, f);
     const text = readFileSync(path, "utf8");
-    if (fmt === "a2ui" && !a2uiReady) continue;
+    if ((fmt === "a2ui" || fmt === "a2ui_express") && !a2uiReady) continue;
     let res: EvalResult;
     try {
       res =
@@ -89,9 +100,13 @@ export function scoreLabel(label: string): { rows: ResultRow[]; a2uiComplete: bo
           ? evalOpenui(text, { truncated: truncated.has(id), reqs })
           : fmt === "jsonrender"
             ? evalJr(text, { reqs })
-            : evalA2ui(path, { reqs });
+            : fmt === "jsonrender_yaml"
+              ? evalJrYaml(text, { reqs })
+              : fmt === "a2ui_express"
+                ? evalA2uiExpress(path, { reqs })
+                : evalA2ui(path, { reqs });
     } catch (e) {
-      if (fmt === "a2ui") {
+      if (fmt === "a2ui" || fmt === "a2ui_express") {
         a2uiReady = false;
         console.error(
           `a2ui scoring unavailable (${String((e as Error).message)
@@ -103,6 +118,7 @@ export function scoreLabel(label: string): { rows: ResultRow[]; a2uiComplete: bo
       }
       throw e;
     }
+    if (process.env.BENCH_VERBOSE) console.log(id, res.errs);
     rows.push({
       fmt,
       scenario: scn,
